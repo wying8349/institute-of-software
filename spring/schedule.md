@@ -42,3 +42,34 @@
 介绍Spring IOC容器的基本概念和应用
  2-1 IOC及Bean容器 (20:18)
  2-2 Spring注入方式 (13:24)
+
+
+## 2021/5/24
+
+### learned:
+
+* [Java Spring框架入门教程](http://c.biancheng.net/spring/)
+  14. Spring AOP概述
+  15. Spring JDK动态代理
+  16. Spring CGLlB动态代理
+  17. Spring通知类型和创建AOP代理
+  18. Spring使用AspectJ开发AOP
+* [面向切面编程AOP](https://www.zhihu.com/question/24863332)
+  - Spring AOP就是基于动态代理的
+* [Comparing Spring AOP and AspectJ](https://www.baeldung.com/spring-aop-vs-aspectj)
+
+
+
+### questions:
+* new Enhancer() throw InaccessibleObjectException
+  - 网上给出解决方案是，在运行时添加--illegal-access=warn，试了一下不太合适，无法解决
+  - 查了类似的问题(new Enhancer()造成IllegalArgumentException)，可能是cglib不支持我使用的某个类文件，因为此库依赖于ASM的过时版本。要解决此错误，我需要一个依赖于支持Java 8的ASM 5+的cglib版本。
+  **这个问题还没有解决**
+  
+* org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 6 in XML document from class path resource [com/mengma/factorybean/applicationContext.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 72; cvc-elt.1.a: Cannot find the declaration of element 'beans'.
+  - 无法识别bean元素
+  - 网络上给出的解决方案是，1. 检查有无拼写错误 2. 修改版本，与导入的jar一致
+  - 暂时无法解决我遇到的问题
+  - 或许需要查依赖树吗？
+  - 为了进度先搁置
+  **这个问题还没有解决**
