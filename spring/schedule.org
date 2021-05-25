@@ -1,0 +1,12 @@
+* Gaming
+:CATEGORY: Game
+** Build Stardrifter character
+SCHEDULED: <2019-03-22 18:00-19:00>
+** Read Stardrifter rules
+SCHEDULED: <2019-03-22 19:00-21:00>
+** Stardrifter playtest
+SCHEDULED: <2019-03-25 0900-1300>
+** Blue Planet @ Mike's
+SCHEDULED: <2019-03-18 18:00-23:00 +1w>
+
+and so on...
