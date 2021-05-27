@@ -80,3 +80,20 @@
 * [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
 * 早该知道Intellij可以直接用Spring Initializr生成新项目。。[官网教程](https://www.jetbrains.com/help/idea/spring-boot.html)
 * 
+
+
+## 2021/5/27
+### learned
+* [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
+  - 如果不注解(如:
+  ```
+  @Repository
+      public class JdbcTacoRepository implements TacoRepository
+  ```
+     中，忘记注解会导致编译时无法识别bean
+     
+### question
+* 报错了，但只在web界面上显示，控制台看不到，应该如何调试？
+  ![image](https://user-images.githubusercontent.com/48537562/119805025-e295ff00-beae-11eb-9aa5-4bab379361b9.png)
+
+    
