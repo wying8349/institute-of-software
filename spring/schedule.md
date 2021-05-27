@@ -44,7 +44,7 @@
  2-2 Spring注入方式 (13:24)
 
 
-## 2021/5/24
+## 2021/5/25
 
 ### learned:
 
@@ -73,3 +73,10 @@
   - 或许需要查依赖树吗？
   - 为了进度先搁置
   **这个问题还没有解决**
+
+
+## 2021/5/26
+### learned
+* [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
+* 早该知道Intellij可以直接用Spring Initializr生成新项目。。[官网教程](https://www.jetbrains.com/help/idea/spring-boot.html)
+* 
