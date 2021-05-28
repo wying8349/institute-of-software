@@ -138,3 +138,7 @@
   - [@ToString注释](https://blog.csdn.net/amoscn/article/details/86558018): 任何类定义都可以用@ToString注释，让lombok生成toString（）方法的实现。
   - [@ApiOperation](https://docs.swagger.io/swagger-core/v1.5.0/apidocs/io/swagger/annotations/ApiOperation.html): swagger的注释，用在方法上，说明方法的作用
   - [@RequestBody](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestBody.html): 用来接收前端传递给后端的json字符串中的数据, 因此不能使用GET方式(无请求体)
+
+
+### 下周计划
+完成集成Spring和部署Spring的学习
