@@ -79,12 +79,33 @@
 ### learned
 * [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
 * 早该知道Intellij可以直接用Spring Initializr生成新项目。。[官网教程](https://www.jetbrains.com/help/idea/spring-boot.html)
-* 
+  - 1.1 什么是 Spring?
+  - 1.2 初始化 Spring应用程序
+      - 1.2.1 使用 Spring Tool Suite初始化 Spring项目（我使用了Idea，参考[官网教程](https://www.jetbrains.com/help/idea/spring-boot.html)）
+      - 1.2.2检查 Spring项目结构
+  - 1.3 编写 Spring应用程序（根据书中例子编写了web程序，用于定制玉米饼，代码稍后上传至仓库）
+      - 1.3.1处理web请求
+      - 1.3.2定义视图
+      - 1.3.3测试控制器
+      - 1.3.4构建并运行应用程序
+      - 1.3.5了解 Spring Boot Dev Tools
+      - 1.3.6回顾
+  - 2.1 展示信息
+      - 2.1.1建立域
+      - 2.1.2创建控制器类
+      - 2.1.3设计视图
+   - 2.2处理表单提交
+   - 2.3验证表单输入
+      - 2.3.1声明验证规则
+      - 2.3.2在表单绑定时执行验证
+      - 2.3.3显示验证错误
+   - 2.4使用视图控制器
 
 
 ## 2021/5/27
 ### learned
 * [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
+* 第三章：使用jdbc读写数据，使用jdbctemplate
   - 如果不注解(如:
   ```
   @Repository
@@ -95,5 +116,25 @@
 ### question
 * 报错了，但只在web界面上显示，控制台看不到，应该如何调试？
   ![image](https://user-images.githubusercontent.com/48537562/119805025-e295ff00-beae-11eb-9aa5-4bab379361b9.png)
-
+* 仔细检查后认为需要写一个类型转换器，但似乎没起作用
+* 已解决，之前的convert加进去不起作用的原因是，Converter这个接口是spring本身就提供的，不能再单独写一个接口，单独写会导致注入不成功的。
     
+## 2021/5/28
+### learned
+* [spring实战](https://potoyang.gitbook.io/spring-in-action-v5/)
+* 阅读软件所代码：fibre中的risk package
+  - 解决了gradle配置的问题（报unsupported class file major version 60, [需重新配置环境变量](https://stackoverflow.com/a/67583836/16055099)）
+  - Could not resolve all dependencies for configuration ':classpath' 解决了，直接import就好了，不要open
+* 阅读软件所代码：domain paclage
+
+* [解析Java框架中entity层，mapper层，service层，controller各层作用](https://blog.csdn.net/u011095110/article/details/86088976)
+  - 实体层: entity/domain: 用于存放我们的实体类，与数据库中的属性值基本保持一致，实现set和get的方法
+  - mapper层: dao: 对数据库进行数据持久化操作，他的方法语句是直接针对数据库操作的，主要实现一些增删改查操作
+  - service层: 给controller层的类提供接口进行调用。一般就是自己写的方法封装起来，就是声明一下，具体实现在serviceImpl中
+  - controller层: web层: 控制层，负责具体模块的业务流程控制，需要调用service逻辑设计层的接口来控制业务流程, controller通过接收前端H5或者App传过来的参数进行业务操作，再将处理结果返回到前端
+
+### 笔记
+* Annotation:
+  - [@ToString注释](https://blog.csdn.net/amoscn/article/details/86558018): 任何类定义都可以用@ToString注释，让lombok生成toString（）方法的实现。
+  - [@ApiOperation](https://docs.swagger.io/swagger-core/v1.5.0/apidocs/io/swagger/annotations/ApiOperation.html): swagger的注释，用在方法上，说明方法的作用
+  - [@RequestBody](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/bind/annotation/RequestBody.html): 用来接收前端传递给后端的json字符串中的数据, 因此不能使用GET方式(无请求体)
